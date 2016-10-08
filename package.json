@@ -12,10 +12,10 @@
   "author": "Felix Rieseberg <felix@felixrieseberg.com>",
   "license": "MIT",
   "devDependencies": {
-    "nan": "^2.3.5",
     "node-gyp": "^3.4.0"
   },
   "dependencies": {
+    "nan": "^2.3.5",
     "bindings": "^1.2.1"
   },
   "gypfile": true
