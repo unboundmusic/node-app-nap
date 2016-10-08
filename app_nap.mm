@@ -22,7 +22,7 @@ NAN_METHOD(DisableAppNap) {
   // Disable app nap, if the api even exists
   if ([[NSProcessInfo processInfo] respondsToSelector:@selector(beginActivityWithOptions:reason:)])
   {
-    uint64_t options = (0x00FFFFFFULL);
+    uint64_t options = (0x00FFFFFFULL | (1ULL << 20)) | 0xFF00000000ULL;
     id activity = [[NSProcessInfo processInfo] beginActivityWithOptions:options reason:[NSString stringWithUTF8String:*reason]];
     info.GetReturnValue().Set(true);
   } else {
